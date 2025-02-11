@@ -1,7 +1,12 @@
-from flask import Flask, request, jsonify, render_template
+from flask import Flask, request, jsonify, render_template, send_from_directory
 from modules.fases_luna import get_moon_phases
 
 app = Flask(__name__, static_folder="static", template_folder="templates")
+
+
+@app.route("/images/<path:filename>")
+def images(filename):
+    return send_from_directory("images", filename)
 
 
 @app.route("/")

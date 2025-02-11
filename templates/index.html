@@ -3,7 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Fases de la Luna</title>
+    <title>Ocularis Luna</title>
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="{{ url_for('images', filename='ojoluna.ico') }}"
+    />
     <link
       rel="stylesheet"
       href="{{ url_for('static', filename='style.css') }}"
@@ -11,18 +16,26 @@
   </head>
 
   <body>
-    <h2>Consultar Fases de la Luna</h2>
-    <label for="start">Fecha de Inicio:</label>
-    <input type="date" id="start" required />
-    <label for="end">Fecha de Fin:</label>
-    <input type="date" id="end" required />
-    <button onclick="fetchMoonPhases()">Consultar</button>
+    <section class="container">
+      <h1>Ocularis Luna</h1>
+      <p>Consulta las fases de la Luna de manera interactiva</p>
 
-    <h3>Resultados:</h3>
-    <ul id="results"></ul>
+      <div class="input-container">
+        <label for="start">Fecha de Inicio:</label>
+        <input type="date" id="start" required />
+        <label for="end">Fecha de Fin:</label>
+        <input type="date" id="end" required />
+        <button onclick="fetchMoonPhases()">🔍 Consultar</button>
+      </div>
 
-    <h3>Gráfica:</h3>
-    <img id="moonPlot" src="" alt="Gráfica de Fases de la Luna" />
+      <h2>Resultados:</h2>
+      <ul id="results"></ul>
+
+      <h2>Gráfica:</h2>
+      <div class="image-container">
+        <img id="moonPlot" src="" alt="Gráfica de Fases de la Luna" />
+      </div>
+    </section>
 
     <script src="{{ url_for('static', filename='script.js') }}"></script>
   </body>

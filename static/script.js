@@ -3,7 +3,7 @@ function fetchMoonPhases() {
   let endDate = document.getElementById("end").value;
 
   if (!startDate || !endDate) {
-    alert("Por favor, seleccione ambas fechas.");
+    alert("Por favor, selecciona ambas fechas.");
     return;
   }
 

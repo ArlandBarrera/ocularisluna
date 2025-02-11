@@ -1,0 +1,9 @@
+TODO:
+
+- Info sobre las fases de la luna [!IMPORTANT]
+- Quiz sobre las fases de la luna [!IMPORTANT]
+- Iconos fases luna (grafica)
+- Calculos relacionados
+- Funcionalidad extra curiosa (posible)
+- Info de las fases resultantes
+- Generar pdf (info relevante)
